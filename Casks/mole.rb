@@ -14,22 +14,22 @@ cask "mole" do
   on_macos do
     on_intel do
       url "https://github.com/tsangpo/homebrew-tap/releases/download/v#{version}/go-mole_Darwin_x86_64.tar.gz"
-      sha256 "6d74934f64ed41884efd1e9590c8368e4035f1fe92761e220d3ed5899954ac95"
+      sha256 "e722e36e8cdccfa7e2732bb34cb25b8b36ca09d3a8c7abc9426894bec07e2dce"
     end
     on_arm do
       url "https://github.com/tsangpo/homebrew-tap/releases/download/v#{version}/go-mole_Darwin_arm64.tar.gz"
-      sha256 "6755ff6a8b4ccf61ea44e18089f75a1def9c1e3becdc113376b83288f1e0cfb2"
+      sha256 "be4973a97757a516000c4b329bfc49c463ebb0da9a34932587e679a74b80b09a"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/tsangpo/homebrew-tap/releases/download/v#{version}/go-mole_Linux_x86_64.tar.gz"
-      sha256 "9147fc6fd939c43f8d95ef14f8b3dec9618c29080aa479cc29c7f5c89c75af17"
+      sha256 "8f7b9c59915c730d72945187d888a6746641535b35537411ecd331cf8630f889"
     end
     on_arm do
       url "https://github.com/tsangpo/homebrew-tap/releases/download/v#{version}/go-mole_Linux_arm64.tar.gz"
-      sha256 "f894f5ce85437e5013eee22b456963aae229081e846709336fe3f74a180752a0"
+      sha256 "43d3e4e71872e24c625f550cd9cc23b1556c514c68ef48333766ee79f9ebe19d"
     end
   end
 
