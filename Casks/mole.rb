@@ -3,7 +3,7 @@ cask "mole" do
   name "mole"
   desc "A lightweight, pure Go implementation of an HTTP tunneling system"
   homepage "https://github.com/tsangpo/go-mole"
-  version "1.0.3"
+  version "1.0.4"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "mole" do
   on_macos do
     on_intel do
       url "https://github.com/tsangpo/homebrew-tap/releases/download/v#{version}/homebrew-tap_Darwin_x86_64.tar.gz"
-      sha256 "c065b137486cfe47c13ae2098a094693bb34356b8aa8164dcee2e5cbdd6a8244"
+      sha256 "d83641c75c80693eacba0acd8b29dae8c644989721514b41e1bcbb673891827d"
     end
     on_arm do
       url "https://github.com/tsangpo/homebrew-tap/releases/download/v#{version}/homebrew-tap_Darwin_arm64.tar.gz"
-      sha256 "645d2a826ceba1a9079a871c861ab31c206eb3babf1891cb9ce02bc7eedaef3e"
+      sha256 "fe87a2d1c7db876b13312dd7768f185e1474ddfa77db32c44b182010c2748775"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/tsangpo/homebrew-tap/releases/download/v#{version}/homebrew-tap_Linux_x86_64.tar.gz"
-      sha256 "8150af7990a04c535bf33f1bbf7158d2a7034008bd2b02c6898f41da9f0a923a"
+      sha256 "f88df9a8bcb606f0490f18401dd27f0d84be4d6ba3afdc2be328e88cace32051"
     end
     on_arm do
       url "https://github.com/tsangpo/homebrew-tap/releases/download/v#{version}/homebrew-tap_Linux_arm64.tar.gz"
-      sha256 "618163b01ed710942f1b66d2e292d49d8d6c01f9f93ccd29afdbd48bd2be42c2"
+      sha256 "f2d408b63156c3812e4e231c59468e39eaa08f17040e7b57714a1794447e02ea"
     end
   end
 
