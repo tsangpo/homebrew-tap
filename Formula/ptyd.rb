@@ -1,25 +1,25 @@
 class Ptyd < Formula
-  desc "A web terminal daemon serving an xterm.js UI attached to a pty over WebSocket"
+  desc "A web terminal daemon serving a browser terminal UI attached to a pty over WebSocket"
   homepage "https://github.com/tsangpo/ptyd"
-  version "0.1.4"
+  version "0.1.5"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.1.4/ptyd-aarch64-apple-darwin.tar.xz"
-      sha256 "f53452757a0af35dbb1510d06944a26640f3f6036ff06b430cda2c1dcdf79098"
+      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.1.5/ptyd-aarch64-apple-darwin.tar.xz"
+      sha256 "6141c6aae1eca67fd384ae442a0a303fb1278c5cfc3132e487aa5fc8681396f4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.1.4/ptyd-x86_64-apple-darwin.tar.xz"
-      sha256 "00713d2ed28e45855e004e1c05eef6bc8f512005fc3e322876998b8e43f1f081"
+      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.1.5/ptyd-x86_64-apple-darwin.tar.xz"
+      sha256 "233ffc3e96dd8471dabedb7ebf10087e000abc88236692db3a0e51a0a227a596"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.1.4/ptyd-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "1d5ad2e958879f4cff29b7121cf6957e46421e7ea4dd1335027746a983c262aa"
+      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.1.5/ptyd-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "4bca9ea5b8c6ccca3bde006289abd81e568babe6c9701b47b63b7c54cddc1d15"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.1.4/ptyd-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "843648cce4a17ba09312ba1bd30176d1a255c3050ed0219e24488467ec51bb63"
+      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.1.5/ptyd-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "ee83ac6f2ca379708e48662c0eea31629a37fa53913108a9da5de4636cc60352"
     end
   end
 
@@ -46,10 +46,18 @@ class Ptyd < Formula
   end
 
   def install
-    bin.install "ptyd" if OS.mac? && Hardware::CPU.arm?
-    bin.install "ptyd" if OS.mac? && Hardware::CPU.intel?
-    bin.install "ptyd" if OS.linux? && Hardware::CPU.arm?
-    bin.install "ptyd" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "ptyd"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "ptyd"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "ptyd"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "ptyd"
+    end
 
     install_binary_aliases!
 
