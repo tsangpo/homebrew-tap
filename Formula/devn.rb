@@ -1,28 +1,28 @@
 class Devn < Formula
   desc "Project-aware Codex, Claude Code and OpenCode launcher for Bifrost"
   homepage "https://github.com/tsangpo/devn"
-  version "0.8.0"
+  version "0.8.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/tsangpo/devn/releases/download/v0.8.0/devn-v0.8.0-darwin-arm64.tar.gz"
-      sha256 "fe61a5cc6cd71b0021aa741cec9ae17dd8bf61823efa13c7c869a31ece041b0e"
+      url "https://github.com/tsangpo/devn/releases/download/v0.8.1/devn-v0.8.1-darwin-arm64.tar.gz"
+      sha256 "4bc2c1ca07a30f1f560dbc1472b709778e1d7fd9d6b80aebb99033fdca5d84a6"
     end
     on_intel do
-      url "https://github.com/tsangpo/devn/releases/download/v0.8.0/devn-v0.8.0-darwin-x64.tar.gz"
-      sha256 "228754e69becd01dac625404cbcbc5102fec9428218573f0ef58a36bf8885f32"
+      url "https://github.com/tsangpo/devn/releases/download/v0.8.1/devn-v0.8.1-darwin-x64.tar.gz"
+      sha256 "286e169dca7b9211eb59e135a7e73c6681387f05119ed8250354b0f3e3728c23"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/tsangpo/devn/releases/download/v0.8.0/devn-v0.8.0-linux-arm64.tar.gz"
-      sha256 "430604292d40bdae20c486608ff0247d3d3fd9607159a00ab395f54c444f3edb"
+      url "https://github.com/tsangpo/devn/releases/download/v0.8.1/devn-v0.8.1-linux-arm64.tar.gz"
+      sha256 "e8ecbaee5c079f380190bac5bb75b18f0e310c10ec6b93cca6cc55c89b4259f1"
     end
     on_intel do
-      url "https://github.com/tsangpo/devn/releases/download/v0.8.0/devn-v0.8.0-linux-x64.tar.gz"
-      sha256 "e88fe4fda5536467d364697accfc795ed04753978b33f786002aa10fa47c5be5"
+      url "https://github.com/tsangpo/devn/releases/download/v0.8.1/devn-v0.8.1-linux-x64.tar.gz"
+      sha256 "5e54f3856bf73899f690a3ab9e7b2737158eb8ff6c195f1f7e8ce1b9d9218c4a"
     end
   end
 
