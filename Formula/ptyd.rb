@@ -1,25 +1,25 @@
 class Ptyd < Formula
   desc "A web terminal daemon serving a browser terminal UI attached to a pty over WebSocket"
   homepage "https://github.com/tsangpo/ptyd"
-  version "0.1.5"
+  version "0.1.6"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.1.5/ptyd-aarch64-apple-darwin.tar.xz"
-      sha256 "6141c6aae1eca67fd384ae442a0a303fb1278c5cfc3132e487aa5fc8681396f4"
+      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.1.6/ptyd-aarch64-apple-darwin.tar.xz"
+      sha256 "260e0bdc58539f28d9a3bf231a89318bd9f6db832f1386a7888e1ee412e65cd3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.1.5/ptyd-x86_64-apple-darwin.tar.xz"
-      sha256 "233ffc3e96dd8471dabedb7ebf10087e000abc88236692db3a0e51a0a227a596"
+      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.1.6/ptyd-x86_64-apple-darwin.tar.xz"
+      sha256 "c5a9552078ea4ffcc617a49de9c03bf28d8540c7e7d4a5d8e54e76671e16c066"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.1.5/ptyd-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "4bca9ea5b8c6ccca3bde006289abd81e568babe6c9701b47b63b7c54cddc1d15"
+      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.1.6/ptyd-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "5ea1fc2e34dbf52be8482f2c3d3ac692aa5c5b73fb0b946bf37c37985d6593f7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.1.5/ptyd-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "ee83ac6f2ca379708e48662c0eea31629a37fa53913108a9da5de4636cc60352"
+      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.1.6/ptyd-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "3990cd65b156a4186d5de7100512536991f90c95561697cd65e9a2cfc8d121aa"
     end
   end
 
