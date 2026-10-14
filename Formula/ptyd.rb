@@ -1,72 +1,29 @@
 class Ptyd < Formula
   desc "A web terminal daemon serving a browser terminal UI attached to a pty over WebSocket"
   homepage "https://github.com/tsangpo/ptyd"
-  version "0.1.7"
-  if OS.mac?
-    if Hardware::CPU.arm?
-      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.1.7/ptyd-aarch64-apple-darwin.tar.xz"
-      sha256 "4955b726627f030f8bc277a177ba4386d668003d979ca15a4b759bae2d468283"
+  version "0.2.0"
+  on_macos do
+    on_arm do
+      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.2.0/ptyd-aarch64-apple-darwin.tar.xz"
+      sha256 "eb4b27005faac3689d864ec25ffdd2188c61fa7b766aba93c57106454bb45cf5"
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.1.7/ptyd-x86_64-apple-darwin.tar.xz"
-      sha256 "a2fbc7817de893f9b28ae9cc9a71ea742bd5ce90968dfa9e186c13a2f0ad81c2"
-    end
-  end
-  if OS.linux?
-    if Hardware::CPU.arm?
-      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.1.7/ptyd-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "4b9aee162d34e0de1325630e7f488ea44159ccc352886657a54dcc619f15119c"
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.1.7/ptyd-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "94fd8afeaf445692134db7169245190ce2905aefac3810f562f867fce8a6d2d8"
+    on_intel do
+      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.2.0/ptyd-x86_64-apple-darwin.tar.xz"
+      sha256 "e282c4c0cbeb82118512921a73d8e9825bccfffd7b6d716aeb284f1ecd02531a"
     end
   end
-
-  BINARY_ALIASES = {
-    "aarch64-apple-darwin":      {},
-    "aarch64-unknown-linux-gnu": {},
-    "x86_64-apple-darwin":       {},
-    "x86_64-unknown-linux-gnu":  {},
-  }.freeze
-
-  def target_triple
-    cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
-    os = OS.mac? ? "apple-darwin" : "unknown-linux-gnu"
-
-    "#{cpu}-#{os}"
-  end
-
-  def install_binary_aliases!
-    BINARY_ALIASES[target_triple.to_sym].each do |source, dests|
-      dests.each do |dest|
-        bin.install_symlink bin/source.to_s => dest
-      end
+  on_linux do
+    on_arm do
+      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.2.0/ptyd-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "65a008b9f47c9445a739c17206cae1558412b9f69f49d3c3f044515b0a1e26f5"
+    end
+    on_intel do
+      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.2.0/ptyd-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "d03a95bb0a7fd956d554ee2b16788fe261560a9f6eeb6ef6471ac372c9f664be"
     end
   end
 
   def install
-    if OS.mac? && Hardware::CPU.arm?
-      bin.install "ptyd"
-    end
-    if OS.mac? && Hardware::CPU.intel?
-      bin.install "ptyd"
-    end
-    if OS.linux? && Hardware::CPU.arm?
-      bin.install "ptyd"
-    end
-    if OS.linux? && Hardware::CPU.intel?
-      bin.install "ptyd"
-    end
-
-    install_binary_aliases!
-
-    # Homebrew will automatically install these, so we don't need to do that
-    doc_files = Dir["README.*", "readme.*", "LICENSE", "LICENSE.*", "CHANGELOG.*"]
-    leftover_contents = Dir["*"] - doc_files
-
-    # Install any leftover files in pkgshare; these are probably config or
-    # sample files.
-    pkgshare.install(*leftover_contents) unless leftover_contents.empty?
+    bin.install "ptyd"
   end
 end
