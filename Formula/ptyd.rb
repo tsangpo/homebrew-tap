@@ -1,25 +1,25 @@
 class Ptyd < Formula
   desc "A web terminal daemon serving a browser terminal UI attached to a pty over WebSocket"
   homepage "https://github.com/tsangpo/ptyd"
-  version "0.4.0"
+  version "0.5.0"
   on_macos do
     on_arm do
-      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.4.0/ptyd-aarch64-apple-darwin.tar.xz"
-      sha256 "e65c400db5e2accea415b1163e35c52067d1663a268a1faa69866412796aa134"
+      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.5.0/ptyd-aarch64-apple-darwin.tar.xz"
+      sha256 "3fc96cf94503e525071594c816c1cdd879cf2455bd318fa4a664b9188ffdd8e7"
     end
     on_intel do
-      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.4.0/ptyd-x86_64-apple-darwin.tar.xz"
-      sha256 "120a25accf9bbc264fb7b8ee5bfb1f53f790b8f768952b690221ec7ab41b4d7e"
+      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.5.0/ptyd-x86_64-apple-darwin.tar.xz"
+      sha256 "0766d6309a12b7e0922c0c3e064d7bd8eb7bfa528f660f1335676d8213061bde"
     end
   end
   on_linux do
     on_arm do
-      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.4.0/ptyd-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "08fa427d7f7e37dc1c169223fbb577418b89b709c06fe5375a959bcfc6d31108"
+      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.5.0/ptyd-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "9709420d8b651939da16e45877a5de11702a2b6ef004fa6d31951a4d48e13c3a"
     end
     on_intel do
-      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.4.0/ptyd-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "956cd5f43d43f3ab2c1ccbc3990de3ce29cd7960255c586dbce72d5328574c1b"
+      url "https://github.com/tsangpo/homebrew-tap/releases/download/v0.5.0/ptyd-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "21e1beaef80eca8a029365ddbae29dbfeaa17762074dcc8f742afb8452cce4fe"
     end
   end
 
