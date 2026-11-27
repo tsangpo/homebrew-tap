@@ -1,25 +1,25 @@
 class HerdrWeb < Formula
   desc "Browser client daemon for herdr-core"
   homepage "https://github.com/tsangpo/herdr-web"
-  version "0.2.12"
+  version "0.2.13"
   on_macos do
     on_arm do
-      url "https://github.com/tsangpo/homebrew-tap/releases/download/herdr-web-v0.2.12/herdr-web-aarch64-apple-darwin.tar.xz"
-      sha256 "3976fb6ebc36e1474d2eb4a9ac4fc2e97ad696b8883b91d9dc169f6a5874d8cb"
+      url "https://github.com/tsangpo/homebrew-tap/releases/download/herdr-web-v0.2.13/herdr-web-aarch64-apple-darwin.tar.xz"
+      sha256 "3095e21adc7297fe46dc8326c0e4fddeee2e1efd27a97b8aff67f8e509f1dbec"
     end
     on_intel do
-      url "https://github.com/tsangpo/homebrew-tap/releases/download/herdr-web-v0.2.12/herdr-web-x86_64-apple-darwin.tar.xz"
-      sha256 "31e6fb8c8d085e0bbbb724422f1a84f51185e73e8b5da2594797bfab00384124"
+      url "https://github.com/tsangpo/homebrew-tap/releases/download/herdr-web-v0.2.13/herdr-web-x86_64-apple-darwin.tar.xz"
+      sha256 "a367af58503663c42807acd66358a703b3b70e778a287a340eef4386f13a5de1"
     end
   end
   on_linux do
     on_arm do
-      url "https://github.com/tsangpo/homebrew-tap/releases/download/herdr-web-v0.2.12/herdr-web-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "079cb17a8a225da180ab358dd7b2cef33c7f46ae4c24fdb6bde8ae117dae6ec0"
+      url "https://github.com/tsangpo/homebrew-tap/releases/download/herdr-web-v0.2.13/herdr-web-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "53fbe3f91b842676abb0dc842257f55e36630c124a2a3030edd8c1b8c992cfa4"
     end
     on_intel do
-      url "https://github.com/tsangpo/homebrew-tap/releases/download/herdr-web-v0.2.12/herdr-web-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "7dba53d6b4e451aeaa184445766075a0195b6d4ac04c99a51d6d45842a63916d"
+      url "https://github.com/tsangpo/homebrew-tap/releases/download/herdr-web-v0.2.13/herdr-web-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "bbcbd2d00fb523d52684c37a0d9778c0307d0d9477ec7794fdcd714193259d03"
     end
   end
 
